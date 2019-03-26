@@ -87,7 +87,7 @@ Name = "WebServerSG"
 resource "aws_instance" "web-1" {
 ami = "ami-011b3ccf1bd6db744"
 availability_zone = "us-east-1a"
-instance_type = "t2.micro"
+instance_type = "t2.small"
 key_name = "${var.key_name}"
 vpc_security_group_ids = ["${aws_security_group.web.id}"] subnet_id = "${aws_subnet.public-subnet.id}"
 associate_public_ip_address = true
